@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        #container {
+            height: 100px;
+            width: 100%;
+            position: relative;
+            outline: 1px solid black;
+        }
+
+        #container_2 {
+            height: 1000px;
+            width: 1000px;
+            position: relative;
+            outline: 1px solid black;
+        }
+
+
+        .grass {
+            height: 10px;
+            width: 10px;
+            position: relative;
+            float: left;
+            background-color: green;
+            outline: 1px solid rgba(236, 236, 236, 0.13);
+        }
+
+        .dirt {
+            height: 10px;
+            width: 10px;
+            position: relative;
+            float: left;
+            background-color: #9bd214;
+        }
+
+        /*.dirt_a {
+            height: 10px;
+            width: 10px;
+            position: relative;
+            float: left;
+            background-color: seashell;
+        }*/
+
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+<!--<div id="container">
+
+</div>-->
+<script>
+    var $container = $("<div id='container'> </div>");
+     var block = [
+        {
+            name : 'A',
+            id : 1,
+            x1: 10,
+            x2: 20,
+            y1: 30,
+            y2: 40,
+        },
+         {
+             name :'B',
+             id : 2,
+             x1: 0,
+             x2: 5,
+             y1: 0,
+             y2: 5,
+         }
+
+    ]
+
+    /*var mapArray = [
+        [0, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+
+
+
+
+    ];*/
+
+   // function drawMap() {
+//code re_build----------------------------------
+       /* for (var i = 0; i < 100; i++){
+            for(var x = 0; x < 200; x++){
+               // $('#container').append('<div class="grass"></div>');
+
+                if (parseInt(mapArray[i][x]) == 1) {
+
+                    $('#container').append('<div class="dirt"></div>');
+                    $("<div></div>").addClass("dirt").appendTo($container);
+
+                }
+                else{
+
+                    $("<div></div>").addClass("grass").appendTo($container);
+                }
+            }
+
+        }*/
+
+
+//code ori----------------------
+       /* for (var i = 0; i < mapArray.length; i++) {
+            for (var j = 0; j < mapArray[i].length; j++) {
+                if (parseInt(mapArray[i][j]) == 0) {
+
+                    $('#container').append('<div class="grass"></div>');
+
+                }
+
+
+            }
+
+        }*/
+
+   // }
+
+    var $container = $("<div id='container_2'> </div>");
+
+    for(var i = 0; i < 100; i++) {
+        for (var j = 0; j < 100; j++){
+            $("<div></div>").addClass("grass").appendTo($container);
+        }
+        $("<div></div>").css("clear", "both").appendTo($container);
+    }
+
+    $container.appendTo($("body"));
+
+
+    /*window.onload = function () {
+        drawMap();
+    }*/
+</script>
+</body>
+</html>

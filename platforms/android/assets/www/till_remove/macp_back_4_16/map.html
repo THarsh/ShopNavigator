@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop Navigator</title>
+    <!--style main  -->
+    <link rel="stylesheet" type="text/css" href="map/css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="map/css/jquery-ui.theme.css">
+    <link rel="stylesheet" type="text/css" href="map/css/jquery-ui.structure.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
+
+
+
+</head>
+<body style="background-image:url(map/img/back.jpg); background-size:cover;">
+
+
+<!-- grid include-->
+<div class="grid" id="containment-wrapper">
+    <div id="draggable-element">
+
+    </div>
+
+    <div id="draggable-element-green">
+
+    </div>
+
+    <div id="draggable-element-orange">
+
+    </div>
+
+    <div id="draggable-element-yellow">
+
+    </div>
+
+</div>
+
+
+<div id="dialog" title="Warning">
+    <p id="message"></p>
+</div>
+
+
+<button id="submit-btn">
+    Navigate
+</button>
+<button id="reload" >Reload</button>
+
+
+<!--js-->
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+
+<script src="map/js/d3.v4.js"></script>
+<script src="map/js/jquery-3.1.1.min.js"></script>
+
+<!--<script type="text/javascript" src="map/js/pathfinding-bower-0.4.18/pathfinding-browser.min.js"></script>-->
+<script type="text/javascript" src="map/js/AStar.js"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!--main_js -->
+<script src="map/js/main.js"></script>
+<script src="map/js/jquery.ui.touch-punch.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,193 @@
+#container {
+    height: 100px;
+    width: 100%;
+    position: relative;
+    /*outline: 1px solid black;*/
+}
+
+#container_2 {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /*outline: 1px solid black;*/
+}
+
+.grass {
+    min-height: 10px;
+    min-width: 10px;
+    position: relative;
+    float: left;
+    background-color: #094480;
+    outline: 1px solid rgba(236, 236, 236, 0.13);
+}
+
+.dirt {
+    min-height: 10px;
+    min-width: 10px;
+    position: relative;
+    float: left;
+    background-color: #1c8bd2;
+}
+
+.block_image {
+    position: absolute;
+    z-index: 5;
+    width: 30px;
+    padding: 15px;
+
+}
+
+/*.dirt_a {
+    height: 10px;
+    width: 10px;
+    position: relative;
+    float: left;
+    background-color: seashell;
+}*/
+
+/* --------drag eliment -------------*/
+#draggable-element{
+	width:50px;
+    height:60px;
+	background-image:url('../img/man.png');
+
+    left: 928px;
+    top: 565px;
+
+    /*width: 25px;*/
+    /*height: 25px;*/
+    /*border-radius: 100px;*/
+    /*background-color: #cf450b;*/
+    /*padding:10px 10px;*/
+    cursor: move;
+    z-index: 100;
+    position: absolute; /* important (all position that's not `static`) */
+}
+
+#draggable-element-green{
+   width:50px;
+   height:60px;
+   background-image:url('../img/man2.png');
+    left: 443px;
+    top: 204px;
+
+    /*width: 25px;*/
+    /*height: 25px;*/
+    /*border-radius: 100px;*/
+    /*background-color: #009F00;*/
+    /*padding:10px 10px;*/
+    cursor: move;
+    z-index: 100;
+    position: absolute; /* important (all position that's not `static`) */
+}
+
+
+#draggable-element-orange{
+    width:50px;
+    height:60px;
+    background-image:url('../img/man3.png');
+    left: 400px;
+    top: 204px;
+
+    /*width: 25px;*/
+    /*height: 25px;*/
+    /*border-radius: 100px;*/
+    /*background-color: #009F00;*/
+    /*padding:10px 10px;*/
+    cursor: move;
+    z-index: 100;
+    position: absolute; /* important (all position that's not `static`) */
+}
+
+#draggable-element-yellow{
+    width:50px;
+    height:60px;
+    background-image:url('../img/man4.png');
+    left: 300px;
+    top: 204px;
+
+    /*width: 25px;*/
+    /*height: 25px;*/
+    /*border-radius: 100px;*/
+    /*background-color: #009F00;*/
+    /*padding:10px 10px;*/
+    cursor: move;
+    z-index: 100;
+    position: absolute; /* important (all position that's not `static`) */
+}
+
+
+
+
+#containment-wrapper {
+    width: 1000px;
+}
+
+.inter-path {
+    z-index: 1000;
+}
+
+.my-circle {
+    z-index: 500;
+
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+svg {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#submit-btn {
+    font-size:25px;
+    float: right;
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    margin-top: -450px;
+    margin-right: 35px;
+}
+
+#reload {
+    float: right;
+    font-size:25px;
+    margin-top: -390px;
+    margin-right: 35px;
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+/*dialog box */
+.ui-dialog .ui-state-hover, .ui-dialog .ui-widget-content .ui-state-hover, .ui-dialog .ui-widget-header .ui-state-hover, .ui-dialog .ui-state-focus, .ui-dialog .ui-widget-content .ui-state-focus, .ui-dialog .ui-widget-header .ui-state-focus, .ui-dialog .ui-button:hover, .ui-dialog .ui-button:focus{
+
+    border: 1px solid #c5c5c5;
+    background: none !important;
+    font-weight: normal;
+    color: transparent !important;
+
+}
+
+.ui-dialog .ui-state-default,.ui-dialog .ui-widget-content .ui-state-default ,.ui-dialog  .ui-widget-header .ui-state-default,.ui-dialog .ui-button, html .ui-dialog  .ui-button.ui-state-disabled:hover, html .ui-dialog .ui-button.ui-state-disabled:active{
+
+    border: 1px solid #c5c5c5;
+    background: none !important;
+    font-weight: normal;
+    color: transparent !important;
+}
+
+.ui-dialog .ui-button-icon-only .ui-icon {
+    left: 50%;
+    margin-left: -9px !important;
+    margin-top: -8px;
+}
+.ui-dialog{
+    z-index:1111;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+    Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">  -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Shop Navigator</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="img-responsive" style="background-image:url(assets/img/back.jpg); background-size:cover;">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-login">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!--<form id="login-form" action="#" method="post" role="form" style="display: block;">  -->
+                            <div class="" id="login-form" style="display: block">
+                                <div class="row" style="background-color:rgb(251, 251, 251); padding:20px;">
+                                    <div class="col-sm-9  col-sm-offset-2">
+                                        <div class="col-md-3">
+                                            <img class="log_img responsive" src="assets/img/avatar_2x.png" style=""/>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <h2>SHOP NAVIGATOR</h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <hr>
+
+                                <div class="form-group">
+                                    <input type="text" name="username1" id="username1" tabindex="1" class="form-control"
+                                           placeholder="Your Name" value="" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="nic1" id="nic1" tabindex="2" class="form-control"
+                                           placeholder="NIC" required>
+                                </div>
+
+                                <div class="col-sm-6 col-sm-offset-3">
+
+                                    <input type="submit" name="login-submit" id="login-submit" tabindex="4"
+                                           class="form-control btn btn-login" value="Log In" onclick="login();">
+
+                                </div>
+                            </div>
+                            <!--</form>-->
+
+                            <div id="register-form" style="display: none;">
+                                <center><h2>REGISTER</h2></center>
+                                <div class="form-group">
+                                    <input type="text" name="username" id="username" tabindex="1" class="form-control"
+                                           placeholder="Your Name" value="" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="nic" id="nic" tabindex="1" class="form-control"
+                                           placeholder="Your NIC" value="" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="text" name="email" id="email" tabindex="1" class="form-control"
+                                           placeholder="Email" value="" required>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <input type="submit" name="" id="" tabindex=""
+                                                   class="form-control btn btn-register" value="Register Now"
+                                                   onclick="register();">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-6 tabs">
+                            <a href="#" class="active" id="login-form-link">
+                                <div class="login">LOGIN</div>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 tabs">
+                            <a href="#" id="register-form-link">
+                                <div class="register">REGISTER</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script src="assets/js/jquery.min.js"></script>
+
+
+<script>
+    $(function () {
+        $('#login-form-link').click(function (e) {
+            $("#login-form").delay(100).fadeIn(100);
+            $("#register-form").fadeOut(100);
+            $('#register-form-link').removeClass('active');
+            $(this).addClass('active');
+            e.preventDefault();
+        });
+        $('#register-form-link').click(function (e) {
+            $("#register-form").delay(100).fadeIn(100);
+            $("#login-form").fadeOut(100);
+            $('#login-form-link').removeClass('active');
+            $(this).addClass('active');
+            e.preventDefault();
+        });
+
+    });
+
+
+    function login() {
+        //login
+        var username = $('#username1').val();
+        var nic = $('#nic1').val();
+
+        var url = 'http://shopnavigator.kanvil.com/webservices/login.php?username=' + username + '&nic=' + nic;
+
+        $.post(url, function (data, status) {
+            var res = JSON.parse(data);
+            if (res.isAuth > 0) {
+                window.location.href = 'map.html';
+            } else {
+                alert('login failed');
+            }
+        });
+
+    }
+
+
+    //register -----
+    function register() {
+        var username = $('#username').val();
+        var nic = $('#nic').val();
+        var email = $('#email').val();
+
+
+        $.post("http://shopnavigator.kanvil.com/webservices/register.php",
+            {
+                username: username,
+                nic: nic,
+                email: email
+            },
+            function (data, status) {
+                alert("Data: " + data + "\nStatus: " + status);
+            });
+    }
+
+</script>
+</body>
+
+</html>
